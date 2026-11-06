@@ -54,7 +54,7 @@ The three research directions, public contact address, education, and selected p
 
 The official department image is the asset served on the [UCLA MSE site](https://www.mse.ucla.edu/): `https://www.mse.ucla.edu/wp-content/uploads/mse/UCLA_Samueli_MSE_rev-1.png`. It is included unchanged and appears on UCLA Blue. UCLA marks remain the property of UCLA; use follows the [UCLA identity guidelines](https://brand.ucla.edu/identity/logos-and-marks/campus-logo). Department approval of the final logo application should precede an official launch.
 
-The original SVG is **editorial line art**, inspired by fluorite coordination and layered growth. It is not a refined polar HfO2/ZrO2 crystal structure, not an ALD reaction mechanism, and must not be reused as a scientific structure figure. The image is decorative (`alt=""`); its caption provides the material association without implying a measured structure.
+The original SVG is **editorial line art**, inspired by fluorite coordination and layered growth. It is not a refined polar HfO2/ZrO2 crystal structure, not an ALD reaction mechanism, and must not be reused as a scientific structure figure. The image is decorative (`alt=""`) and intentionally has no visible caption.
 
 UCLA's [lab-site accessibility requirement](https://dts.ucla.edu/index.php/digital-accessibility/websites) is WCAG 2.1 AA. [Color/type guidance](https://brand.ucla.edu/fundamentals/accessibility/color-type) and [brand colors](https://brand.ucla.edu/identity/colors) informed the implementation. DM Sans is a deliberate draft typography choice requested for the group identity, rather than UCLA's default system font stack.
 
