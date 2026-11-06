@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#f5f6f7">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="website">
+  <title>{{title}}</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/dm-sans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell" id="top">
+    <header class="masthead">
+      <a class="wordmark" href="#top" aria-label="Behera group home">behera group<span class="wordmark-dot" aria-hidden="true">.</span></a>
+      <a class="department-mark" href="https://www.mse.ucla.edu/" aria-label="UCLA Samueli Materials Science and Engineering">
+        <img src="assets/ucla-mse.png" alt="UCLA Samueli Materials Science and Engineering" width="290" height="68">
+      </a>
+    </header>
+    <nav class="section-nav" aria-label="Main navigation">
+      <a href="#publications"><span class="nav-number" aria-hidden="true">01</span>publications<span class="nav-arrow" aria-hidden="true">↘</span></a>
+      <a href="#research"><span class="nav-number" aria-hidden="true">02</span>research outline<span class="nav-arrow" aria-hidden="true">↘</span></a>
+      <a href="#team"><span class="nav-number" aria-hidden="true">03</span>team<span class="nav-arrow" aria-hidden="true">↘</span></a>
+    </nav>
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="intro-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">materials, structure, function</p>
+          <h1 id="intro-heading">At the<br>atomic limit<span class="title-dot">.</span></h1>
+          <div class="intro-copy">{{intro}}</div>
+        </div>
+        <figure class="lattice-figure">
+          <img src="assets/lattice.svg" alt="" width="600" height="440">
+          <figcaption><span>HfO<sub>2</sub> / ZrO<sub>2</sub></span><span>thin-film motif · schematic</span></figcaption>
+        </figure>
+      </section>
+      <section class="content-section publications" id="publications" aria-labelledby="publications-heading">
+        <div class="section-label"><span class="section-number" aria-hidden="true">01 /</span><h2 id="publications-heading">Publications</h2><p>Selected work</p><a class="text-link" href="{{scholar}}">Google Scholar <span aria-hidden="true">↗</span></a></div>
+        <div class="section-body publication-list">{{publications}}</div>
+      </section>
+      <section class="content-section research" id="research" aria-labelledby="research-heading">
+        <div class="section-label"><span class="section-number" aria-hidden="true">02 /</span><h2 id="research-heading">Research outline</h2><p>From synthesis<br>to function</p></div>
+        <div class="section-body research-copy">{{research}}{{support}}</div>
+      </section>
+      <section class="content-section team" id="team" aria-labelledby="team-heading">
+        <div class="section-label"><span class="section-number" aria-hidden="true">03 /</span><h2 id="team-heading">Team</h2><p>UCLA · Los Angeles</p></div>
+        <div class="section-body team-copy">{{team}}</div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-top"><a class="wordmark footer-wordmark" href="#top">behera group<span class="wordmark-dot" aria-hidden="true">.</span></a><div class="footer-links"><a href="mailto:{{email}}">Contact <span aria-hidden="true">↗</span></a><a href="{{scholar}}">Google Scholar <span aria-hidden="true">↗</span></a>{{x}}<a href="https://www.ucla.edu/accessibility">Accessibility <span aria-hidden="true">↗</span></a></div></div>
+      <div class="footer-bottom"><p>© {{year}} {{copyright}}</p><p>Materials Science and Engineering · UCLA</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+    </footer>
+  </div>
+</body>
+</html>
