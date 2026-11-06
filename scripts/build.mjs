@@ -10,6 +10,11 @@ const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;',
 // Markdown is trusted repository content. It is never accepted from visitors.
 const markdown = text => marked.parse(text, { gfm: true });
 const withoutComments = text => text.replace(/<!--[\s\S]*?-->/g, '').trim();
+// Decorative vector arrows stay monochrome on Safari and other emoji-capable platforms.
+const arrow = (direction, className = '') => {
+  const paths = { external: 'M4 12 12 4M4 4h8v8', down: 'm4 4 8 8M4 12h8V4', up: 'M8 13V3M3 8l5-5 5 5' };
+  return `<svg class="arrow-icon ${className}" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="${paths[direction]}"/></svg>`;
+};
 const config = JSON.parse(await read('site.json'));
 
 for (const key of ['title', 'description', 'copyright', 'scholar', 'email']) {
@@ -43,8 +48,11 @@ const values = {
   publications: publications(await read('content/publications.md')),
   research: markdown(await read('content/research.md')),
   team: markdown(await read('content/team.md')),
+  arrow_external: arrow('external'),
+  arrow_down: arrow('down', 'nav-arrow'),
+  arrow_up: arrow('up'),
   support: support ? `<aside class="support" aria-label="Research support"><h3>Research support</h3>${markdown(support)}</aside>` : '',
-  x: config.x ? `<a href="${escape(config.x)}">X <span aria-hidden="true">↗</span></a>` : '',
+  x: config.x ? `<a href="${escape(config.x)}">X ${arrow('external')}</a>` : '',
 };
 let html = (await read('template.html')).replace(/\{\{(\w+)\}\}/g, (_, key) => {
   if (!(key in values)) throw new Error(`Unknown template field: ${key}`);

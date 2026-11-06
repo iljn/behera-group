@@ -2,6 +2,14 @@
 
 A small, static research group website. Content lives in Markdown; one Node script builds HTML and CSS. There is no client JavaScript, CMS, framework, analytics, cookie banner, CDN dependency, or package installation.
 
+[View the prototype](https://iljn.github.io/behera-group/) · [Source repository](https://github.com/iljn/behera-group)
+
+## Review and handoff
+
+The Pages prototype and this repository are public; viewing them requires no invitation or login. For editing, the repository owner can invite the PI's GitHub account through Settings → Collaborators → Add people. For long-term lab ownership, transfer the repository to a lab organization or the PI's account. GitHub Pages URLs are not redirected after a transfer, so update the shared site URL or configure a custom domain at that point.
+
+The `.openai/hosting.json` file only identifies the separate ChatGPT preview and its output directory; it contains no credentials. It is optional in a GitHub-only handoff. Retain the font and Markdown-parser license files. The ChatGPT preview has separate access controls; use the public Pages link for routine review.
+
 ## Edit and build
 
 Requires Node 22 or newer. From the repository root:
@@ -27,7 +35,7 @@ Open `dist/index.html` directly in a browser, or serve `dist/` with any static s
 
 Publications use a `### YEAR` heading for each entry followed by a title link and citation paragraph. Multiple entries in the same year each receive their own heading. Other files use ordinary Markdown; raw HTML is supported for trusted repository maintainers. Never feed visitor-submitted Markdown to this build. The support block is omitted when `support.md` contains only comments or whitespace. Add confirmed funders there; prior publication acknowledgments do not establish current lab funding.
 
-The footer year is determined at build time. Rebuild annually or with any content change. `site.json` currently uses a Google Scholar **author search**, since a direct profile ID has not been independently verified. Replace `scholar` with the verified profile URL when available. Set `x` to a verified account URL to add its footer link; leaving it empty omits the link.
+The footer year is determined at build time. Rebuild annually or with any content change. `site.json` uses Piush Behera's direct Google Scholar profile URL. Set `x` to a verified account URL to add its footer link; leaving it empty omits the link.
 
 ## Deployment
 
@@ -46,6 +54,7 @@ The included `.github/workflows/pages.yml` builds, checks, and deploys `dist/` o
 - **Minification:** conservative HTML whitespace cleanup and CSS whitespace/comment removal in the build script. No optimizer dependency; prose, inline spacing, and preformatted content remain intact. SVG is already compact source.
 - **Color:** UCLA Blue `#2774AE`, a light neutral ground, and dark neutral text. Blue is reserved for navigation boundaries, links, focus, and the artwork. No gold is needed.
 - **Interaction:** native anchor navigation, hover/focus treatments in CSS, no scrolling effects or stateful controls. All sections are visible in the initial HTML.
+- **Link icons:** tiny inline SVG paths inherit the surrounding text color and cannot fall back to emoji fonts. Navigation icons remain hidden below 640px. The menu and document both follow research → team → publications.
 - **Accessibility target:** WCAG 2.1 AA, as required for UCLA lab websites. Semantic landmarks; ordered headings; skip link; keyboard focus; responsive reflow; no color-only information; reduced-motion handling; and measured normal-text contrast. `check.mjs` verifies build integrity and the four text/background pairs. Automated checks are not full accessibility certification; perform screen-reader and browser reflow checks before an official launch. Update alt text and heading structure with content changes.
 
 ## Content and assets to confirm before an official launch

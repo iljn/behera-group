@@ -46,7 +46,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-nav a + a { border-left: 1px solid var(--blue); }
 .section-nav a:hover, .section-nav a:focus-visible { background: var(--blue); color: white; }
 .section-nav a:focus-visible { outline-offset: 4px; }
-.nav-arrow { margin-left: auto; font-size: 21px; line-height: 1; }
+.arrow-icon { display: inline-block; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: square; stroke-linejoin: miter; vertical-align: -.15em; flex: none; }
+.nav-arrow { margin-left: auto; width: 18px; height: 18px; }
 .hero { min-height: 576px; padding: 75px 0 62px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
 h1 { font-size: clamp(52px, 5.3vw, 72px); line-height: 1.055; letter-spacing: -.062em; margin-left: -3px; }
 .intro-copy { max-width: 390px; margin-top: 26px; }
@@ -57,7 +58,7 @@ h1 { font-size: clamp(52px, 5.3vw, 72px); line-height: 1.055; letter-spacing: -.
 h2 { font-size: 23px; line-height: 1.25; letter-spacing: -.035em; }
 .section-label > p { color: var(--muted); margin-top: 12px; font-size: 14px; }
 .text-link { display: inline-block; margin-top: 29px; font-size: 14px; }
-.text-link span { margin-left: 6px; }
+.text-link .arrow-icon { margin-left: 6px; }
 .publication { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 24px; padding: 0 0 27px; }
 .publication + .publication { padding-top: 25px; border-top: 1px solid var(--soft-line); }
 .publication:last-child { padding-bottom: 0; }
